@@ -7,35 +7,30 @@ public class ThirdClass {
         double num1 = sc.nextDouble();
         System.out.println("Choose on of the possible operations: +, -, *, /, %");
         char operator = sc.next().charAt(0);
-        System.out.println("Enter the second number");
+        if (operator == '+' || operator == '-' || operator == '*' || operator == '/' || operator == '%') {
+            System.out.println("Enter the second number");
+        } else
+            System.out.println("Your input is not correct.");
+
         double num2 = sc.nextDouble();
 
-        if (operator == '+')
-        {
+        if (operator == '+') {
             double res = num1 + num2;
             System.out.println(res);
-        }
-        else if (operator == '-')
-        {
+        } else if (operator == '-') {
             double res = num1 - num2;
             System.out.println(res);
-        }
-        else if (operator == '*')
-        {
+        } else if (operator == '*') {
             double res = num1 * num2;
             System.out.println(res);
-        }
-        else if (operator == '/')
-        {
+        } else if (operator == '/') {
             double res = num1 / num2;
             System.out.println(res);
-        }
-        else if (operator == '%')
-        {
+        } else if (operator == '%') {
             double res = num1 % num2;
             System.out.println(res);
         }
-        else
-        System.out.println("Your input is not correct.");
     }
 }
+
+
