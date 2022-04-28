@@ -4,60 +4,59 @@ public class UniversityGroup {
     private int endYear;
     private String[] studentArray;
 
-    public String getGroupName(){
+    public String getGroupName() {
         return groupName;
     }
 
-    public int getStartYear(){
+    public int getStartYear() {
         return startYear;
     }
 
-    public int getEndYear(){
+    public int getEndYear() {
         return endYear;
     }
 
-    public String[] getStudentArray(){
+    public String[] getStudentArray() {
         return studentArray;
     }
 
-    public UniversityGroup (String groupName, int startYear){
+    public UniversityGroup(String groupName, int startYear) {
         this.groupName = groupName;
         this.startYear = startYear;
         this.endYear = startYear + 5;
     }
 
-    public UniversityGroup (String groupName, int startYear, String[] studentArray){
+    public UniversityGroup(String groupName, int startYear, String[] studentArray) {
         this.groupName = groupName;
         this.startYear = startYear;
         this.studentArray = studentArray;
         this.endYear = startYear + 5;
     }
 
-    public void addStudents(String[] students){
-        int i = 0;
-        for(int i = 0; i < studentArray.length; i++) {
-            if(studentArray == null){
-
-            }
+    public void addStudents(String[] students) {
+        if (studentArray == null) {
+            studentArray = students;
         }
-
     }
 
     public String getGroupDescription() {
-       String groupDescription = String.format("%s, Start year is %d, End year is %d, Students: %s, ",groupName,startYear,endYear,studentArray);
+        String groupDescription = String.format("Group name: %s, Start year is %d, End year is %d, Students: .", groupName, startYear, endYear);
         for (int i = 0; i < studentArray.length; i++) {
             groupDescription = groupDescription + studentArray[i];
         }
-            return groupDescription;
+        return groupDescription;
     }
 
     public static void main(String[] args) {
         UniversityGroup group1 = new UniversityGroup("Kh-067-Java", 2022);
-        String[] studentsJava = new String[]{"Pikhulya Yana", "Kraynov Andrey", "Lisa Boyko"};
+        UniversityGroup group2 = new UniversityGroup("Kh-013-Python", 2021, null);
+
+
+        String[] students = new String[]{"Pikhulya Yana, ", "Kraynov Andrey, ", "Lisa Boyko."};
+        group1.addStudents(students);
         System.out.println(group1.getGroupDescription());
 
-        UniversityGroup group2 = new UniversityGroup("Kh-013-Python",2022, students);
-        String[] studentsPython = new String[]{"Polyakova Kate", "Sirko Bohdan", ""};
+        group2.addStudents(students);
         System.out.println(group2.getGroupDescription());
     }
 }
