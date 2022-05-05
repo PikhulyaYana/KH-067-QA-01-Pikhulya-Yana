@@ -1,6 +1,6 @@
 package Carnivores;
 
-public class Panthera extends CatLike {
+public class Panthera extends BigCats {
     public Panthera(String name, int averageAge, int averageWeight) {
         super(name, averageAge, averageWeight);
     }

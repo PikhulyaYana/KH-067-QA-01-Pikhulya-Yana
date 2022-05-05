@@ -6,7 +6,7 @@ public class Main {
         panthera1.description();
         System.out.println(panthera1.aboutMe());
         panthera1.voice();
-
+        System.out.println("&");
         DomesticCat domesticCat1 = new DomesticCat("Archi", 5, 4);
         domesticCat1.description();
         System.out.println(domesticCat1.aboutMe());
