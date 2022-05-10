@@ -5,6 +5,7 @@ import java.util.List;
 public class Task8 {
 
     static void sortList(List<String> stringList) {
+        Collections.sort(stringList, String.CASE_INSENSITIVE_ORDER);
         System.out.println(stringList);
     }
 
@@ -18,7 +19,6 @@ public class Task8 {
         fruits.add("Apricot");
         fruits.add("grapes");
         fruits.add("Banana");
-        Collections.sort(fruits, String.CASE_INSENSITIVE_ORDER);
 
         sortList(fruits);
     }
