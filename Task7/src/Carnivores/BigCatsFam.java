@@ -11,4 +11,8 @@ public interface BigCatsFam {
 
     String DIFFERENCE = "I'm a wild animal and can't live like a pet at home.";
 
+    default String getDifference() {
+        return DIFFERENCE;
+    }
+
 }

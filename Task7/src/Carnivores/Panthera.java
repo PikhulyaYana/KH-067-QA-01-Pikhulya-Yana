@@ -12,7 +12,7 @@ public class Panthera extends BigCats implements BigCatsFam {
 
     @Override
     public void description() {
-        System.out.println("I'm a Big cat and I come from cat-like carnivores.");
+        System.out.println("I'm a Big cat and I come from cat-like carnivores." + " " + getDifference());
     }
 
     @Override
